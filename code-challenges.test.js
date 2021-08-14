@@ -1,5 +1,7 @@
 // ASSESSMENT 6: JavaScript Coding Practical Questions with Jest
 
+// const { test } = require("jest-circus")
+
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -17,17 +19,33 @@
 // --------------------1) Create a function that takes in an array of objects and returns an array with a sentence about each person with their names capitalized.
 
 // a) Create a test with an expect statement using the variable provided.
-
+describe("Capitalized", () => { 
+  test("returns an array with a sentence about each person with their names capitalized", () => {
 var people = [
   { name: "ford prefect", occupation: "hitchhiker" },
   { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
   { name: "arthur dent", occupation: "radio employee" }
 ]
+
+expect(capitalized(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is a president of the galaxy.", "Arthur Dent is a radio employee."])
+
+   })
+  })
 // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is a president of the galaxy.", "Arthur Dent is a radio employee."]
 
 
+// made the test fail
+// my function will be capitilzed into array
+// i will be using toUpperCase and if/else 
+// the reason why i want to use toUpperCase because i want to capitilze the name only 
+// 
+
 
 // b) Create the function that makes the test pass.
+const capitalized = (array) => {
+  var name = arr.toUpperCase([])  
+  
+}
 
 
 
