@@ -19,7 +19,7 @@
 // --------------------1) Create a function that takes in an array of objects and returns an array with a sentence about each person with their names capitalized.
 
 // a) Create a test with an expect statement using the variable provided.
-describe("Capitalized", () => { 
+describe("nameCapitalized", () => { 
   test("returns an array with a sentence about each person with their names capitalized", () => {
 var people = [
   { name: "ford prefect", occupation: "hitchhiker" },
@@ -36,16 +36,13 @@ expect(capitalized(people)).toEqual(["Ford Prefect is a hitchhiker.", "Zaphod Be
 
 // made the test fail
 // my function will be capitilzed into array
-// i will be using toUpperCase and if/else 
-// the reason why i want to use toUpperCase because i want to capitilze the name only 
-// 
+
+
 
 
 // b) Create the function that makes the test pass.
-const capitalized = (array) => {
-  var name = arr.toUpperCase([])  
+const nameCapitalized (Newarr)
   
-}
 
 
 

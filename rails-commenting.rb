@@ -7,24 +7,31 @@
 # FILE: app/controller/blog_posts_controller.rb
 
 # ---1)
+#The first step is to create a controller method that will access all the items from the database.
 class BlogPostsController < ApplicationController
   def index
     # ---2)
+    #In the index method we are making an Active Record call that will save all the content from the database as an instance variable.
     @posts = BlogPost.all
   end
 
   def show
     # ---3)
+    #Show is a RESTful route that looks for one item in the database.
     @post = BlogPost.find(params[:id])
   end
 
   # ---4)
+  #New is a RESTful route that displays a form for the user.
+
+
   def new
     @post = Post.new
   end
 
   def create
     # ---5)
+    #Create is a RESTful route that submits user data to the database.
     @post = BlogPost.create(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -34,6 +41,7 @@ class BlogPostsController < ApplicationController
   end
 
   # ---6)
+  
   def edit
     @post = BlogPost.find(params[:id])
   end
