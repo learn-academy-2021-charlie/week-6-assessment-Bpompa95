@@ -41,6 +41,7 @@ class BlogPostsController < ApplicationController
   end
 
   # ---6)
+  #controller method that will provide a form to edit a specific existing item in the db
   
   def edit
     @post = BlogPost.find(params[:id])
@@ -49,6 +50,7 @@ class BlogPostsController < ApplicationController
   def update
     @post = BlogPost.find(params[:id])
     # ---7)
+    #updates the item in the db with data from the form, is passed the strong params method call
     @post.update(blog_post_params)
     if @post.valid?
       redirect_to blog_post_path(@post)
@@ -63,14 +65,17 @@ class BlogPostsController < ApplicationController
       redirect_to blog_posts_path
     else
       # ---8)
+      #If the destroy method fails, it will redirect to the post the user was trying to delete
       redirect_to blog_post_path(@post)
     end
   end
 
   # ---9)
+  # Private method, retricts the scope, anything below private can only be called inside the class
   private
   def blog_post_params
     # ---10)
+    #Allows only the title and content columns to be created/updated
     params.require(:blog_post).permit(:title, :content)
   end
 end
