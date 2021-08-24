@@ -106,3 +106,4 @@ describe("Halloween", () => {
 const Halloween = (array) => {
   return array.reduce((previousValue, currentValue) => previousValue + currentValue ** 3, 0)
 }
+// THANK GOD FOR STUDY GROUP
